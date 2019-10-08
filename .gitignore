@@ -2,3 +2,5 @@ node_modules/
 app/*.html
 app/styles/*.css
 
+npm-debug.log
+
