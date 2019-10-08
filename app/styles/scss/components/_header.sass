@@ -1,171 +1,160 @@
-.s_header
-  background-color: blue
+.s_header 
+  background-color: blue 
+.menu1 
+  position: relative 
+  display: -webkit-box 
+  display: -ms-flexbox 
+  display: flex 
+  height: auto 
+  z-index: 10 
+  ul 
+    position: relative 
+    display: block 
+    display: -webkit-box 
+    display: -ms-flexbox 
+    display: flex 
+    margin: 0px 
+    padding: 0px 
+    width: 100% 
+    height: auto 
+    list-style: none 
+    -webkit-box-orient: horizontal 
+    -webkit-box-direction: normal 
+    -ms-flex-direction: row 
+    flex-direction: row 
+    li 
+      margin: 0 24px 0 0 
+      padding: 10px 0 
+      position: relative 
+      display: inline-block 
+      width: auto 
+      height: auto 
+      vertical-align: top 
+      text-align: left 
+      a 
+        width: -webkit-max-content 
+        width: max-content 
+        display: block 
+        font-size: 14px 
+        font-family: Arial, sans-serif 
+        color: #ffffef 
+        text-decoration: none 
+        font-weight: bold 
+        text-transform: uppercase 
+        -webkit-box-sizing: border-box 
+        box-sizing: border-box 
+      ul 
+        position: absolute 
+        top: 36px 
+        left: 0px 
+        display: none 
+        width: auto 
+        background: #EBBD5B 
+        white-space: nowrap 
+        li 
+          display: block 
+          width: auto 
+          a 
+            display: block 
+            text-transform: none 
+            height: auto 
+            padding: 0px 45px 
+            width: 100% 
+            -webkit-box-sizing: border-box 
+            box-sizing: border-box 
+          ul 
+            top: 0px 
+            left: 100% 
+            display: none 
+            background: #fddc96 
+            a 
+              color: #F38A01 
+      &:hover 
+        & > ul 
+          display: block 
+  & > ul 
+    font-size: 1px 
+    line-height: 24px 
+    &::after 
+      display: inline-block 
+      width: 100% 
+      height: 0px 
+      content: " " 
+    & > li 
+      &:last-child 
+        & > ul 
+          left: auto 
+          right: 0px 
+          ul 
+            left: auto 
+            right: 100% 
+.nav-main 
+  &:not(.dropdown):after 
+    content: "" 
+    position: absolute 
+    width: 0 
+    height: 2px 
+    background-color: #000 
+    bottom: 3px 
+    left: 1px 
+    -webkit-transition: .3s 
+    transition: .3s 
+  &:not(.dropdown):hover 
+    &:after 
+      width: 100% 
+  &.dropdown 
+    &:before 
+      content: '\25BE' 
+      display: block 
+      width: 14px 
+      height: 14px 
+      // margin-right:24px
+      position: absolute 
+      top: 11px 
+      right: -20px 
+      color: #fff 
+      font-size: 30px 
+      line-height: 14px 
+      -webkit-transition: transform .3s 10ms ease-in-out 
+      -webkit-transition: -webkit-transform .3s 10ms ease-in-out 
+      transition: -webkit-transform .3s 10ms ease-in-out 
+      transition: transform .3s 10ms ease-in-out 
+      transition: transform .3s 10ms ease-in-out, -webkit-transform .3s 10ms ease-in-out 
+    &:hover 
+      & > ul 
+        animation: fadein_moveup_60 0.5s 0ms ease-in-out 
+      &:before 
+        -webkit-transform: rotate(180deg) 
+        -ms-transform: rotate(180deg) 
+        transform: rotate(180deg) 
+        top: 11px 
+        right: -20px 
+        color: #f3c100 
+.dropdown 
+  &:before 
+    content: '\25BE' 
+    display: block 
+    width: 14px 
+    height: 14px 
+    position: absolute 
+    top: 11px 
+    right: 27px 
+    color: #fff 
+    font-size: 30px 
+    line-height: 14px 
+    -webkit-transition: transform .3s 10ms ease-in-out 
+    -webkit-transition: -webkit-transform .3s 10ms ease-in-out 
+    transition: -webkit-transform .3s 10ms ease-in-out 
+    transition: transform .3s 10ms ease-in-out 
+    transition: transform .3s 10ms ease-in-out, -webkit-transform .3s 10ms ease-in-out 
+  &:hover 
+    &:before 
+      -webkit-transform: rotate(-90deg) 
+      -ms-transform: rotate(-90deg) 
+      transform: rotate(-90deg) 
+      top: 11px 
+      right: 27px 
 
-.menu1
-  position: relative
-  display: -webkit-box
-  display: -ms-flexbox
-  display: flex
-  height: auto
-  z-index: 10
-
-  ul
-    position: relative
-    display: block
-    display: -webkit-box
-    display: -ms-flexbox
-    display: flex
-    margin: 0px
-    padding: 0px
-    width: 100%
-    height: auto
-    list-style: none
-    -webkit-box-orient: horizontal
-    -webkit-box-direction: normal
-    -ms-flex-direction: row
-    flex-direction: row
-
-    li
-      margin: 0 24px 0 0
-      padding: 10px 0
-      position: relative
-      display: inline-block
-      width: auto
-      height: auto
-      vertical-align: top
-      text-align: left
-
-      a
-        width: -webkit-max-content
-        width: max-content
-        display: block
-        font-size: 14px
-        font-family: Arial, sans-serif
-        color: #ffffef
-        text-decoration: none
-        font-weight: bold
-        text-transform: uppercase
-        -webkit-box-sizing: border-box
-        box-sizing: border-box
-
-      ul
-        position: absolute
-        top: 36px
-        left: 0px
-        display: none
-        width: auto
-        background: #EBBD5B
-        white-space: nowrap
-
-        li
-          display: block
-          width: auto
-
-          a
-            display: block
-            text-transform: none
-            height: auto
-            padding: 0px 45px
-            width: 100%
-            -webkit-box-sizing: border-box
-            box-sizing: border-box
-
-          ul
-            top: 0px
-            left: 100%
-            display: none
-            background: #fddc96
-
-            a
-              color: #F38A01
-
-      &:hover > ul
-        display: block
-
-  > ul
-    font-size: 1px
-    line-height: 24px
-
-    &::after
-      display: inline-block
-      width: 100%
-      height: 0px
-      content: " "
-
-    > li:last-child > ul
-      left: auto
-      right: 0px
-
-      ul
-        left: auto
-        right: 100%
-
-.nav-main
-  &:not(.dropdown)
-    &:after
-      content: ""
-      position: absolute
-      width: 0
-      height: 2px
-      background-color: #000
-      bottom: 3px
-      left: 1px
-      -webkit-transition: .2s
-      transition: .2s
-
-    &:hover:after
-      width: 100%
-
-  &.dropdown
-    &:before
-      content: '\25BE'
-      display: block
-      width: 14px
-      height: 14px
-      position: absolute
-      top: 11px
-      right: -20px
-      color: #fff
-      font-size: 30px
-      line-height: 14px
-      -webkit-transition: transform .3s 10ms ease-in-out
-      -webkit-transition: -webkit-transform .3s 10ms ease-in-out
-      transition: -webkit-transform .3s 10ms ease-in-out
-      transition: transform .3s 10ms ease-in-out
-      transition: transform .3s 10ms ease-in-out, -webkit-transform .3s 10ms ease-in-out
-
-    &:hover:before
-      -webkit-transform: rotate(180deg)
-      -ms-transform: rotate(180deg)
-      transform: rotate(180deg)
-      top: 11px
-      right: -20px
-      color: #f3c100
-
-.dropdown
-  &:before
-    content: '\25BE'
-    display: block
-    width: 14px
-    height: 14px
-    position: absolute
-    top: 11px
-    right: 27px
-    color: #fff
-    font-size: 30px
-    line-height: 14px
-    -webkit-transition: transform .3s 10ms ease-in-out
-    -webkit-transition: -webkit-transform .3s 10ms ease-in-out
-    transition: -webkit-transform .3s 10ms ease-in-out
-    transition: transform .3s 10ms ease-in-out
-    transition: transform .3s 10ms ease-in-out, -webkit-transform .3s 10ms ease-in-out
-
-  &:hover:before
-    -webkit-transform: rotate(-90deg)
-    -ms-transform: rotate(-90deg)
-    transform: rotate(-90deg)
-    top: 11px
-    right: 27px
 
 @-webkit-keyframes fadein_moveup_60
   0%
